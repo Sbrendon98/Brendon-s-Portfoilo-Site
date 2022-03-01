@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
-import NavBar from '../components/NavBar'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import NavBar from "../components/NavBar";
 
 export default function Home() {
   return (
@@ -15,43 +15,20 @@ export default function Home() {
 
       <main className={styles.main}>
         <NavBar />
-        <h1 className={styles.title}>
-          Salutations!
-        </h1>
-        <h3>Brendon Sylvestre's Portfolio Site</h3>
+        <h1 className={styles.title}>Salutations!</h1>
+        <h3 className="text-3xl font-bold underline">
+          Brendon Sylvestre's Portfolio Site
+        </h3>
         {/* <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p> */}
 
         <div className={styles.grid}>
-          
-          <Link href="/about" className={styles.card}> 
-           <p>Head to About</p>
-          </Link>
-          
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+          <a className=''>
+            <Link href="/about">
+              <p>Head to About</p>
+            </Link>
           </a>
         </div>
       </main>
@@ -62,12 +39,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }

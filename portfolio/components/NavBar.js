@@ -1,39 +1,41 @@
 import Link from 'next/link'
 
+const TWstyling = "text-blue-500 hover: text-blue-800 text-center"
+const TWlist = 'mr-6'
 
 const NavBar = () => {
     return (
-        <ul>
-            <li>
+        <ul className='flex content-center'>
+            <li className={TWlist}>
                 <Link href='/about'>
-                    About
+                    <a className={TWstyling}>About</a>
                 </Link>
             </li>
-            <li>
+            <li className={TWlist}>
                 <Link href='/skills'>
-                    Skills
+                    <a className={TWstyling}>Skills</a>
                 </Link>
             </li>
-            <li>
+            <li className={TWlist}>
                 <Link href='/porfolio'>
-                    Projects
+                    <a className={TWstyling}>Porfolio</a>
                 </Link>
             </li>
-            <li>
+            <li className={TWlist}>
                 <Link href='/blog'>
-                    Blog
+                    <a className={TWstyling}>Blog</a>
                 </Link>
             </li>
-            <li>
+            <li className={TWlist}>
                 <Link href='/contact'>
-                  Contact
+                  <a className={TWstyling}>Contact Me</a>
                 </Link>
             </li>
-            <li id="Instagram">
+            <li className={TWlist}>
             </li>
-            <li id="Github">
+            <li className={TWlist}>
             </li>
-            <li id="LinkedIn"></li>
+            <li className={TWlist}></li>
         </ul>
     )
 }
